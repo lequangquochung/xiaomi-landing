@@ -17,15 +17,16 @@ export default function Navbar() {
 
   return (
     <header className={`${style.headerBlock} w-full text-white`}>
-      <nav className={`mx-auto flex ${style.navDesktop}  max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8`}>
+      <nav className={`flex ${style.navDesktop} justify-around px-4 sm:px-6 lg:px-8`}>
         {/* mobile toggle button */}
         <button
-          onClick={() => setOpen((v) => !v)}>
-          <Image src="/images/toggle_mb_nav.svg"
+          onClick={() => setOpen((v) => !v)}
+          className="md:hidden lg:hidden">
+          <Image src="/icons/toggle_mb_nav.svg"
             alt="Xiaomi"
             width={24}
             height={19}
-            className="md:hidden"
+
           />
         </button>
 
@@ -46,11 +47,8 @@ export default function Navbar() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="relative rounded-full px-3 py-1 transition-colors hover:text-yellow-400"
+                  className="relative rounded-full px-3 py-1 transition-colors color-neutral-200 font-size-14"
                 >
-                  {item.label === "HOME" && (
-                    <span className="absolute inset-0 -z-10 rounded-full bg-[#333333]" />
-                  )}
                   {item.label}
                 </Link>
               </li>

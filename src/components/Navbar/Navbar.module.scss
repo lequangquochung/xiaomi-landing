@@ -1,15 +1,10 @@
-.headerBlock {
-    // background-color: var(--color-gray-900);
-}
-
 .navDesktop {
     height: var(--dm-80);
 }
 
 :global(ul > li > a) {
-    font-size: var(--dm-14);
-
     &:hover {
+        color: var(--color-primary-root);
         background-color: var(--color-secondary-600);
     }
 }
