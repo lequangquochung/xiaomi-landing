@@ -27,18 +27,18 @@ const rowVariant: Record<number, string> = {
 
 const rankIcon = (rank: number) => `/icons/rank_${rank}.svg`; // 1–5
 
-export default function TopProducts() {
+export default function TopSelling() {
     return (
-        <section className={styles.wrapper}>
+        <section className={`wrapperBlock`}>
             <div className={styles.inner}>
-                <h2 className={styles.title}>TOP BEST-SELLING PRODUCTS</h2>
+                <h2 className={`${styles.titleTopicBackground} titleTopic`}>TOP BEST-SELLING PRODUCTS</h2>
 
                 {/* header */}
-                <div className={`${styles.row} ${styles.rowHeader} ${styles.colDetails} ${styles.fontSizeMobile}`}>
-                    <p className={`${styles.colRank} ${styles.fontSizeMobile}`}>No.</p>
-                    <p className={`${styles.fontSizeMobile}`}>Products</p>
-                    <p className={`${styles.colQty} ${styles.fontSizeMobile}`}>Quantity</p>
-                    <p className={`${styles.colPrice} ${styles.fontSizeMobile}`}>Price</p>
+                <div className={`${styles.row} ${styles.rowHeader} ${styles.colDetails} fontSizeMobile`}>
+                    <p className={`${styles.colRank} fontSizeMobile`}>No.</p>
+                    <p className={`fontSizeMobile`}>Products</p>
+                    <p className={`${styles.colQty} fontSizeMobile`}>Quantity</p>
+                    <p className={`${styles.colPrice} fontSizeMobile`}>Price</p>
                 </div>
 
                 {/* items */}
@@ -57,11 +57,11 @@ export default function TopProducts() {
                                 </div>
                             </div>
 
-                            <div className={`${styles.fontSizeMobile} font-italic font-weight-900`}>{item.name}</div>
-                            <div className={`${styles.colQty} ${styles.fontSizeMobile} font-italic font-weight-900`}>{item.quantity}</div>
+                            <div className={`fontSizeMobile font-italic font-weight-900`}>{item.name}</div>
+                            <div className={`${styles.colQty} fontSizeMobile font-italic font-weight-900`}>{item.quantity}</div>
 
-                            <div className={`${styles.colPrice} ${styles.fontSizeMobile} font-italic font-weight-900`}>
-                                <span className={`${styles.priceBadge} ${styles.fontSizeMobile} background-secondary-900`}>{item.price}</span>
+                            <div className={`${styles.colPrice} fontSizeMobile font-italic font-weight-900`}>
+                                <span className={`${styles.priceBadge} fontSizeMobile background-secondary-900`}>{item.price}</span>
                             </div>
                         </div>
                     ))}

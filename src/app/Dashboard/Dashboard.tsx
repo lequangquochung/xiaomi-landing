@@ -1,7 +1,8 @@
 import Navbar from "@components/Navbar/Navbar";
 import Image from "next/image";
 import styles from "./Dashboard.module.scss";
-import TopProducts from "app/Top-selling/Top-seliing";
+import TopSelling from "app/Top-selling/Top-seliing";
+import TopProducts from "app/Top-products/TopProducts";
 
 export default function Dashboard() {
     return (
@@ -20,6 +21,7 @@ export default function Dashboard() {
                     />
                 </div>
             </div>
+            <TopSelling />
             <TopProducts />
         </div>
     );

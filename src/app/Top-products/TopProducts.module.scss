@@ -1,0 +1,28 @@
+.productCard {
+    width: 180px;
+    height: 245px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+.inner {
+    width: 100%;
+    max-width: 1200px;
+    padding: 32px 32px 40px;
+    border-radius: 16px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .productCard {
+        height: 140px;
+        width: 102px;
+        ;
+    }
+}
