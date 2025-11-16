@@ -1,6 +1,6 @@
 // src/components/TopProducts/TopProducts.tsx
 import Image from "next/image";
-import styles from "./Top-selling.module.scss";
+import styles from "./TopSelling.module.scss";
 
 type Product = {
     rank: number;

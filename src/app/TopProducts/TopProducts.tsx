@@ -17,7 +17,7 @@ const products = [
 
 export default function TopProducts() {
     return (
-        <section className="wrapperBlock !pt-0">
+        <div className="wrapperBlock !pt-0">
             <div className={`${styles.inner} relative overflow-hidden`}>
                 <div className="flex items-center justify-between">
                     <h2 className="titleTopic text-[28px] md:text-[32px] font-extrabold text-[#FFD22F] tracking-[0.2em]">
@@ -25,13 +25,13 @@ export default function TopProducts() {
                     </h2>
                     <div className="flex gap-3">
                         <button
-                            className="tp-arrow-prev w-10 h-10 flex items-center justify-center rounded-full bg-[#2B2B2B] hover:bg-[#3A3A3A] text-white text-lg shadow-md transition-colors"
+                            className={`${styles.slideButton} tp-arrow-prev`}
                             aria-label="Previous"
                         >
                             ‹
                         </button>
                         <button
-                            className="tp-arrow-next w-10 h-10 flex items-center justify-center rounded-full bg-[#2B2B2B] hover:bg-[#3A3A3A] text-white text-lg shadow-md transition-colors"
+                            className={`${styles.slideButton} tp-arrow-next`}
                             aria-label="Next"
                         >
                             ›
@@ -57,8 +57,8 @@ export default function TopProducts() {
                             spaceBetween: 0,
                         },
                         1280: {
-                            slidesPerView: 5.6,
-                            spaceBetween: 0,
+                            slidesPerView: 5.2,
+                            spaceBetween: 32,
                         },
                     }}
                 >
@@ -77,7 +77,7 @@ export default function TopProducts() {
                     ))}
                 </Swiper>
             </div>
-        </section>
+        </div>
     );
 }
 
