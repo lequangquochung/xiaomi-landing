@@ -6,7 +6,7 @@ import TopSelling from "app/TopSelling/TopSelling";
 import TopProducts from "app/TopProducts/TopProducts";
 import SaleProducts from "app/SaleProducts/SaleProducts";
 import Footer from "@components/Footer/Footer";
-import Popup from "@components/popup/Popup";
+import Popup from "@components/PopupWelcome/Popup";
 import { use, useEffect, useState } from "react";
 
 const dashBoardTitle = "XIAOMI TV Max Series"
