@@ -4,6 +4,7 @@
 
   /* Font weights */
   --fw-medium: 500;
+  --fw-weight-300: 300;
   --fw-black-italic: 900;
 
   /* Font sizes */
@@ -28,6 +29,10 @@
 }
 
 /* Font weight*/
+.font-weight-300 {
+  font-weight: var(--fw-weight-300);
+}
+
 .font-weight-900 {
   font-weight: var(--fw-black-italic);
 }

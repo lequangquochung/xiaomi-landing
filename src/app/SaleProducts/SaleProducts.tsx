@@ -6,7 +6,7 @@ import Image from "next/image";
 import styles from "./SaleProducts.module.scss";
 import "swiper/css";
 
-export default function PromoSection() {
+export default function SaleProducts() {
     return (
         <div className="wrapperBlock">
             <div className={` ${styles.inner} grid grid-cols-1 lg:grid-cols-2 gap-8`}>

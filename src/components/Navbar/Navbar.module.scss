@@ -7,11 +7,11 @@
     &:hover {
         color: var(--color-primary-root);
         background-color: var(--color-secondary-600);
+        border-radius: 100px;
     }
 }
 
 .topRightButton {
-    font-size: 14px;
     padding: 8px 32px;
     border-radius: 100px;
     width: 129px;
@@ -25,6 +25,7 @@
     & span {
         font-style: italic;
         font-weight: 900;
+        font-size: 16px;
     }
 }
 
@@ -42,12 +43,13 @@
     background-color: var(--color-secondary-800);
 }
 
-.navMobile {
-    &__items:active {
-        color: var(--color-primary-root);
-        background-color: var(--color-secondary-600);
-    }
-}
+// .navMobile {
+//     &__items:active {
+//         color: var(--color-primary-root);
+//         background-color: var(--color-secondary-600);
+
+//     }
+// }
 
 @media (max-width: 768px) {
     .navBlock {
@@ -55,7 +57,8 @@
     }
 
     .topRightButton {
-        width: 125px;
+        width: 130px;
+        padding: 8px;
         height: 36px;
     }
 }

@@ -26,13 +26,13 @@ export default function Navbar() {
 
   return (
     <header className={`w-full text-white`}>
-      <nav className={`flex ${style.navBlock} justify-start md:justify-around px-8 md:px-4 lg:px-8 z-2`}>
+      <nav className={`flex ${style.navBlock} justify-start md:justify-around px-8 md:px-4 lg:px-8 z-999`}>
         {/* mobile toggle button */}
 
         {open ?
           <button
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden lg:hidden z-2">
+            className="md:hidden lg:hidden z-999">
             <Image src="/icons/close.svg"
               alt="Xiaomi"
               width={24}
@@ -42,7 +42,7 @@ export default function Navbar() {
           :
           < button
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden lg:hidden z-2 ">
+            className="md:hidden lg:hidden z-999 ">
             <Image src="/icons/toggle_mb_nav.svg"
               alt="Xiaomi"
               width={24}
@@ -78,13 +78,13 @@ export default function Navbar() {
         </div>
 
         {/* button action desktop */}
-        <div className="items-center gap-4 flex">
-          <Image src="/icons/xiaomi_mobile.svg" alt="Xiaomi" width={40} height={40} className="ml-3" />
+        <div className="items-center gap-2 flex ">
+          <Image src="/icons/xiaomi_mobile.svg" alt="Xiaomi" width={40} height={40} className="ml-3 md:hidden" />
           <button className={`${style.topRightButton} ${style.signUpButton}`}>
-            <span className="md:text-sm">SIGN UP</span>
+            <span className="text-sm flex justify-center md:text-base">SIGN UP</span>
           </button>
           <button className={`${style.topRightButton} ${style.logInButton}`}>
-            <span className="color-neutral-200 text-sm">LOG IN</span>
+            <span className="color-neutral-200 text-sm flex justify-center">LOG IN</span>
           </button>
 
           <div className="relative text-left hidden md:block">
@@ -100,7 +100,7 @@ export default function Navbar() {
               />
             </button>
             {openLang && (
-              <div className="absolute left-0 top-full mt-2 w-24 rounded-lg bg-[#1f1f1f] border border-[#3a3a3a] z-999">
+              <div className="absolute left-0 top-full mt-2 w-24 z-999">
                 <button
                   onClick={() => selectLang("ENG")}
                   className="block w-full text-left px-3 py-2 text-sm text-white hover:bg-[#2a2a2a] hover:text-yellow-400"
@@ -125,14 +125,14 @@ export default function Navbar() {
       {/* Menu mobile dropdown */}
       {
         open && (
-          <div className={`md:hidden lg:hidden fixed inset-x-0 top-16 bottom-0 z-30 ${style.bgColorSec800}`}>
+          <div className={`md:hidden lg:hidden fixed inset-x-0 top-16 bottom-0 z-999 ${style.bgColorSec800}`}>
             <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3">
               <ul className="flex flex-col gap-1 text-sm">
                 {navItems.map((item) => (
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="block rounded-md px-2 py-2 text-center navMobile__items"
+                      className="block rounded-md px-2 py-2 text-center"
                       onClick={() => setOpen(false)}
                     >
                       {item.label}

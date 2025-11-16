@@ -68,6 +68,17 @@ img {
   }
 }
 
+.titlePopup,
+.mainTitle {
+  background: linear-gradient(90deg,
+      #ffffff 0%,
+      #ffd3e3 40%,
+      #ffea9f 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* responsive */
 @media (max-width: 768px) {
   .fontSizeMobile {

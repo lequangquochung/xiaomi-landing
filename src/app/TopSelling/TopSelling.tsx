@@ -28,7 +28,7 @@ const rankIcon = (rank: number) => `/icons/rank_${rank}.svg`; // 1–5
 
 export default function TopSelling() {
     return (
-        <section className={`wrapperBlock`}>
+        <div className={`wrapperBlock pt-4`}>
             <div className={styles.inner}>
                 <h2 className={`${styles.titleTopicBackground} titleTopic mb-6`}>TOP BEST-SELLING PRODUCTS</h2>
 
@@ -64,6 +64,6 @@ export default function TopSelling() {
                     ))}
                 </div>
             </div>
-        </section >
+        </div >
     );
 }
