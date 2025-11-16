@@ -36,7 +36,7 @@ export default function Popup({
                     onClick={onClose}
                     className={`${styles.closeBtn} absolute right-4 top-4 z-20 flex items-center justify-center`}
                 >
-                    <span className="text-base">✕</span>
+                    <span className="text-base text-white">✕</span>
                 </button>
 
                 <div className="px-6 pt-12 pb-4 text-center text-white">
