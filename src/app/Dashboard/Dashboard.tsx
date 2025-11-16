@@ -1,13 +1,13 @@
 "use client";
-import Navbar from "@components/Navbar/Navbar";
-import Image from "next/image";
-import styles from "./Dashboard.module.scss";
-import TopSelling from "app/TopSelling/TopSelling";
-import TopProducts from "app/TopProducts/TopProducts";
-import SaleProducts from "app/SaleProducts/SaleProducts";
 import Footer from "@components/Footer/Footer";
+import Navbar from "@components/Navbar/Navbar";
 import Popup from "@components/PopupWelcome/Popup";
-import { use, useEffect, useState } from "react";
+import SaleProducts from "app/SaleProducts/SaleProducts";
+import TopProducts from "app/TopProducts/TopProducts";
+import TopSelling from "app/TopSelling/TopSelling";
+import Image from "next/image";
+import { useState } from "react";
+import styles from "./Dashboard.module.scss";
 
 const dashBoardTitle = "XIAOMI TV Max Series"
 const subTitle = "View to the max";
