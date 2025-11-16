@@ -1,4 +1,3 @@
-// src/components/TopProducts/TopProducts.tsx
 import Image from "next/image";
 import styles from "./TopSelling.module.scss";
 
@@ -33,15 +32,13 @@ export default function TopSelling() {
             <div className={styles.inner}>
                 <h2 className={`${styles.titleTopicBackground} titleTopic mb-6`}>TOP BEST-SELLING PRODUCTS</h2>
 
-                {/* header */}
-                <div className={`${styles.row} ${styles.rowHeader} ${styles.colDetails} fontSizeMobile`}>
-                    <p className={`${styles.colRank} fontSizeMobile`}>No.</p>
-                    <p className={`fontSizeMobile`}>Products</p>
-                    <p className={`${styles.colQty} fontSizeMobile`}>Quantity</p>
-                    <p className={`${styles.colPrice} fontSizeMobile`}>Price</p>
+                <div className={`${styles.row} ${styles.rowHeader} ${styles.colDetails} text-sm fontSizeMobile`}>
+                    <p className={`${styles.colRank} fontSizeMobile text-sm`}>No.</p>
+                    <p className={`fontSizeMobile text-sm`}>Products</p>
+                    <p className={`${styles.colQty} fontSizeMobile text-sm`}>Quantity</p>
+                    <p className={`${styles.colPrice} fontSizeMobile text-sm`}>Price</p>
                 </div>
 
-                {/* items */}
                 <div className={styles.items}>
                     {products.map((item: Product, index: number) => (
                         <div key={item.rank} className={`${styles.row} ${index < 2 ? rowVariant[index] : `${styles.rank_default}`} ${styles.colDetails}`}>

@@ -1,7 +1,7 @@
 .inner {
     width: 100%;
     max-width: 1200px;
-    padding: 32px 16px;
+    padding: 32px 16px 0px 16px;
     border-radius: 16px;
 }
 
@@ -24,7 +24,7 @@
     align-items: center;
     padding: 12px 20px;
     border-radius: 16px;
-    background: #202020;
+    background: var(--color-secondary-800);
     color: #e5e5e5;
     font-size: 16px;
 }
@@ -35,14 +35,12 @@
     padding-inline: 24px;
     padding-block: 0 12px;
     font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
     color: #8f8f8f;
 }
 
 .colDetails {
     p {
-        color: #5D5D5D;
+        color: var(--color-neutral-500);
     }
 
     font-style: italic;
@@ -78,38 +76,37 @@
     min-width: 134px;
     padding: 10px 16px;
     border-radius: 16px;
-    color: #FFC700;
+    color: var(--color-primary-root);
     font-weight: 700;
     font-size: 16px;
-    // background-color: #131415;
 }
 
 .rank_1 {
     background: linear-gradient(90deg,
             rgba(255, 200, 61, 0.15) 0%,
             rgba(255, 200, 61, 0.05) 10%,
-            #1F2023 100%);
+            var(--color-secondary-800) 100%);
 }
 
 .rank_2 {
     background: linear-gradient(90deg,
             rgba(58, 59, 62, 1) 0%,
             rgba(255, 200, 61, 0.05) 10%,
-            #1F2023 100%);
+            var(--color-secondary-800) 100%);
 }
 
 .rank_3 {
     background: linear-gradient(90deg,
             rgba(51, 46, 44, 1) 0%,
             rgba(255, 200, 61, 0.05) 10%,
-            #1F2023 100%);
+            var(--color-secondary-800) 100%);
 }
 
 .rank_default {
     background: linear-gradient(90deg,
             rgba(40, 40, 43, 1) 0%,
             rgba(255, 200, 61, 0.05) 10%,
-            #1F2023 100%);
+            var(--color-secondary-800) 100%);
 }
 
 /* responsive */
@@ -128,7 +125,7 @@
 
     .priceBadge {
         min-width: auto;
-        font-size: 12px;
+        font-size: 10px;
         padding-inline: 12px;
     }
 

@@ -6,8 +6,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-
-
 }
 
 @theme inline {
@@ -27,7 +25,14 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-main), system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+button,
+img {
+  cursor: pointer;
 }
 
 .titleTopic {
@@ -38,16 +43,13 @@ body {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #ffc933;
-  // margin-bottom: 24px;
   line-height: 48px;
-
 }
 
 .wrapperBlock {
   width: 100%;
   display: flex;
   justify-content: center;
-  // padding-top: 40px;
   padding-inline: 16px;
   background-color: #131415;
 }
@@ -56,18 +58,12 @@ body {
   width: 40px;
   height: 40px;
   align-items: center;
-  justify-content: center;
-  border-radius: 9999px;
   background: var(--color-secondary-600);
   color: #FFFFFF99;
-  font-size: 1.125rem;
   border-radius: 12px;
   opacity: 0.6;
-  transition: background-color 0.2s;
-  cursor: pointer;
 
   &:hover {
-    background: #3A3A3A;
     opacity: 1;
   }
 }
@@ -77,4 +73,9 @@ body {
   .fontSizeMobile {
     font-size: 10px;
   }
+}
+
+/* cursor */
+.cursor-pointer {
+  cursor: pointer;
 }

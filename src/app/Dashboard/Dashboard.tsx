@@ -9,11 +9,9 @@ import Footer from "@components/Footer/Footer";
 
 export default function Dashboard() {
     return (
-        <div>
+        <section>
             <Navbar />
-            {/* main picture */}
-            <div
-                className="w-full">
+            <div className="w-full">
                 <div className="relative w-full aspect-[1600/722] overflow-hidden">
                     <Image
                         src="/images/dashboard.jpg"
@@ -28,6 +26,6 @@ export default function Dashboard() {
             <TopProducts />
             <SaleProducts />
             <Footer />
-        </div>
+        </section>
     );
 }

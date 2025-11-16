@@ -17,7 +17,7 @@ const products = [
 
 export default function TopProducts() {
     return (
-        <div className="wrapperBlock !pt-0">
+        <div className="wrapperBlock">
             <div className={`${styles.inner} relative overflow-hidden`}>
                 <div className="flex items-center justify-between mb-3">
                     <h2 className="titleTopic">
@@ -66,8 +66,8 @@ export default function TopProducts() {
                         <SwiperSlide key={item.id}>
                             <div className={`${styles.productCard} md:h-[320px] lg:h-[340px] rounded-2xl 
               overflow-hidden bg-black cursor-pointer transition-transform`}>
-                                <img
-                                    src={item.image}
+                
+                                <img src={item.image}
                                     alt={`Top product ${item.id}`}
                                     className={` w-full h-full object-fill`}
                                     loading="lazy"

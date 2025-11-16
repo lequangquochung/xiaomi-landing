@@ -1,5 +1,5 @@
-.navDesktop {
-    height: var(--dm-80);
+.navBlock {
+    height: 80px;
     background-color: var(--color-secondary-900);
 }
 
@@ -7,5 +7,55 @@
     &:hover {
         color: var(--color-primary-root);
         background-color: var(--color-secondary-600);
+    }
+}
+
+.topRightButton {
+    font-size: 14px;
+    padding: 8px 32px;
+    border-radius: 100px;
+    width: 129px;
+    padding: 8px 32px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+
+    & span {
+        font-style: italic;
+        font-weight: 900;
+    }
+}
+
+.signUpButton {
+    background-color: var(--color-primary-root);
+    color: #000;
+}
+
+.logInButton {
+    border: 1px solid var(--color-primary-root);
+    border-radius: 100px;
+}
+
+.bgColorSec800 {
+    background-color: var(--color-secondary-800);
+}
+
+.navMobile {
+    &__items:active {
+        color: var(--color-primary-root);
+        background-color: var(--color-secondary-600);
+    }
+}
+
+@media (max-width: 768px) {
+    .navBlock {
+        height: 64px;
+    }
+
+    .topRightButton {
+        width: 125px;
+        height: 36px;
     }
 }

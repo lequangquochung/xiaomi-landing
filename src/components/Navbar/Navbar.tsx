@@ -12,23 +12,44 @@ const navItems = [
   { label: "PRICE", href: "#price" },
 ];
 
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  return (
-    <header className={`${style.headerBlock} w-full text-white`}>
-      <nav className={`flex ${style.navDesktop} justify-around px-4 sm:px-6 lg:px-8`}>
-        {/* mobile toggle button */}
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="md:hidden lg:hidden">
-          <Image src="/icons/toggle_mb_nav.svg"
-            alt="Xiaomi"
-            width={24}
-            height={19}
+  const [openLang, setOpenLang] = useState(false);
+  const [lang, setLang] = useState<"ENG" | "VI">("ENG");
 
-          />
-        </button>
+  const selectLang = (value: "ENG" | "VI") => {
+    setLang(value);
+    setOpenLang(false);
+  };
+
+  return (
+    <header className={`w-full text-white`}>
+      <nav className={`flex ${style.navBlock} justify-start md:justify-around px-8 md:px-4 lg:px-8 z-2`}>
+        {/* mobile toggle button */}
+
+        {open ?
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="md:hidden lg:hidden z-2">
+            <Image src="/icons/close.svg"
+              alt="Xiaomi"
+              width={24}
+              height={19}
+            />
+          </button>
+          :
+          < button
+            onClick={() => setOpen((v) => !v)}
+            className="md:hidden lg:hidden z-2 ">
+            <Image src="/icons/toggle_mb_nav.svg"
+              alt="Xiaomi"
+              width={24}
+              height={19}
+            />
+          </button>
+        }
 
         {/* Menu desktop */}
         <div className="hidden items-center gap-8 md:flex">
@@ -42,12 +63,12 @@ export default function Navbar() {
               className="rounded-full"
             />
           </Link>
-          <ul className="navList flex items-center gap-6 text-xs font-medium tracking-wide">
+          <ul className="navList flex items-center gap-6 tracking-wide">
             {navItems.map((item) => (
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="relative rounded-full px-3 py-1 transition-colors color-neutral-200 font-size-14"
+                  className="relative rounded-full px-3 py-1 transition-colors color-neutral-200 text-sm"
                 >
                   {item.label}
                 </Link>
@@ -57,79 +78,72 @@ export default function Navbar() {
         </div>
 
         {/* button action desktop */}
-        <div className="hidden items-center gap-4 md:flex">
-          <button className="rounded-full bg-[#f5b000] px-5 py-2 text-xs font-semibold tracking-wide text-black transition hover:brightness-110">
-            SIGN UP
+        <div className="items-center gap-4 flex">
+          <Image src="/icons/xiaomi_mobile.svg" alt="Xiaomi" width={40} height={40} className="ml-3" />
+          <button className={`${style.topRightButton} ${style.signUpButton}`}>
+            <span className="md:text-sm">SIGN UP</span>
           </button>
-          <button className="rounded-full border border-[#f5b000] px-5 py-2 text-xs font-semibold tracking-wide text-[#f5b000] transition hover:bg-[#f5b000]/10">
-            LOG IN
+          <button className={`${style.topRightButton} ${style.logInButton}`}>
+            <span className="color-neutral-200 text-sm">LOG IN</span>
           </button>
 
-          <button className={`flex items-center gap-1 text-xs tracking-wide text-gray-300 hover:text-white`}>
-            ENG
-            <svg
-              viewBox="0 0 20 20"
-              className="h-3 w-3"
-              aria-hidden="true"
-              fill="currentColor"
+          <div className="relative text-left hidden md:block">
+            <button className={`flex items-center gap-1 text-xs tracking-wide hover:text-white`}
+              onClick={() => setOpenLang(!openLang)}
             >
-              <path d="M5.25 7.5 10 12.25 14.75 7.5h-9.5z" />
-            </svg>
-          </button>
+              <span>{lang}</span>
+              <Image
+                src="/icons/arrow_drop_down.svg"
+                alt="Arrow Down"
+                width={8}
+                height={8}
+              />
+            </button>
+            {openLang && (
+              <div className="absolute left-0 top-full mt-2 w-24 rounded-lg bg-[#1f1f1f] border border-[#3a3a3a] z-999">
+                <button
+                  onClick={() => selectLang("ENG")}
+                  className="block w-full text-left px-3 py-2 text-sm text-white hover:bg-[#2a2a2a] hover:text-yellow-400"
+                >
+                  ENG
+                </button>
+
+                <button
+                  onClick={() => selectLang("VI")}
+                  className="block w-full text-left px-3 py-2 text-sm text-white hover:bg-[#2a2a2a] hover:text-yellow-400"
+                >
+                  VI
+                </button>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* button action mobile */}
-        {/* <button
-          className="inline-flex items-center justify-center rounded-md p-2 text-gray-200 hover:bg-gray-700 md:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle navigation"
-        >
-          <span className="block h-0.5 w-5 bg-current" />
-          <span className="mt-1 block h-0.5 w-5 bg-current" />
-          <span className="mt-1 block h-0.5 w-5 bg-current" />
-        </button> */}
       </nav>
 
       {/* Menu mobile dropdown */}
-      {open && (
-        <div className="border-t border-neutral-800 bg-[#181818] md:hidden">
-          <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3">
-            <ul className="flex flex-col gap-1 text-sm">
-              {navItems.map((item) => (
-                <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    className="block rounded-md px-2 py-2 text-center"
-                    onClick={() => setOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            {/* <div className="mt-2 flex flex-col gap-2">
-              <button className="w-full rounded-full bg-[#f5b000] px-4 py-2 text-xs font-semibold tracking-wide text-black">
-                SIGN UP
-              </button>
-              <button className="w-full rounded-full border border-[#f5b000] px-4 py-2 text-xs font-semibold tracking-wide text-[#f5b000]">
-                LOG IN
-              </button>
-              <button className="mt-1 flex items-center gap-1 self-end text-xs tracking-wide text-gray-300">
-                ENG
-                <svg
-                  viewBox="0 0 20 20"
-                  className="h-3 w-3"
-                  aria-hidden="true"
-                  fill="currentColor"
-                >
-                  <path d="M5.25 7.5 10 12.25 14.75 7.5h-9.5z" />
-                </svg>
-              </button>
-            </div> */}
+      {
+        open && (
+          <div className={`md:hidden lg:hidden fixed inset-x-0 top-16 bottom-0 z-30 ${style.bgColorSec800}`}>
+            <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3">
+              <ul className="flex flex-col gap-1 text-sm">
+                {navItems.map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      href={item.href}
+                      className="block rounded-md px-2 py-2 text-center navMobile__items"
+                      onClick={() => setOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
-      )}
-    </header>
+        )
+      }
+    </header >
   );
 }

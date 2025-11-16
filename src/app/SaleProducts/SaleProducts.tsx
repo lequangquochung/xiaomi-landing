@@ -2,16 +2,14 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import Image from "next/image";
 import styles from "./SaleProducts.module.scss";
 import "swiper/css";
 
 export default function PromoSection() {
     return (
-        <div className="wrapperBlock !pt-0">
-
-            <div className={` ${styles.inner} grid grid-cols-1 lg:grid-cols-2 gap-8 !pt-0`}>
-
-                {/* LEFT: BLACK FRIDAY (50%) */}
+        <div className="wrapperBlock">
+            <div className={` ${styles.inner} grid grid-cols-1 lg:grid-cols-2 gap-8`}>
                 <div>
                     <div className="flex items-center justify-between mb-3">
                         <h2 className="titleTopic text-yellow-400 font-bold text-2xl">BLACK FRIDAY</h2>
@@ -37,31 +35,26 @@ export default function PromoSection() {
                         className={`${styles.imgShow} overflow-hidden`}
                     >
                         <SwiperSlide>
-                            <img src="/images/black_friday.png" className="w-full h-full" />
+                            <Image src="/images/black_friday.png" alt="Black Friday" width={500} height={500} className="w-full h-full" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="/images/black_friday.png" className="w-full h-full" />
+                            <Image src="/images/black_friday.png" alt="Black Friday" width={500} height={500} className="w-full h-full" />
                         </SwiperSlide>
                     </Swiper>
                 </div>
 
-                {/* RIGHT: NEW PRODUCTS + SALES (50%) */}
                 <div className="grid grid-cols-2 gap-6">
 
-                    {/* NEW PRODUCTS */}
                     <div className={`${styles.imgShow} space-y-4`}>
                         <h2 className={`${styles.fontSizeMobile} titleTopic !text-left`}>NEW PRODUCTS</h2>
-                        <img src="/images/new_product.png" className="rounded-xl w-full " />
+                        <Image src="/images/new_product.png" alt="Sale Products" width={500} height={500} />
                     </div>
 
-                    {/* SALES */}
                     <div className={`${styles.imgShow} space-y-4`}>
                         <h2 className={`${styles.fontSizeMobile} titleTopic !text-left`}>SALES</h2>
-                        <img src="/images/sale_product.png" className="rounded-xl w-full" />
+                        <Image src="/images/sale_product.png" alt="Sale Products" width={500} height={500} />
                     </div>
-
                 </div>
-
             </div>
         </div>
     );

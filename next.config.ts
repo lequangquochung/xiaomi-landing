@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "src/styles")],
   },
+  devIndicators: false
 };
 
 export default nextConfig;
