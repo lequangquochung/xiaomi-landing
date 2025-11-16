@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <header className={`w-full text-white`}>
-      <nav className={`flex ${style.navBlock} justify-start md:justify-around px-8 md:px-4 lg:px-8 z-999`}>
+      <nav className={`flex ${style.navBlock} justify-start md:justify-around px-8 md:px-8 lg:px-8 z-999`}>
         {/* mobile toggle button */}
 
         {open ?
