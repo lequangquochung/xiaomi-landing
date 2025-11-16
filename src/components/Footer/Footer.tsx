@@ -10,7 +10,7 @@ export default function Footer() {
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
                     {/* ABOUT US */}
                     <div className="space-y-3">
-                        <h4 className="font-weight-900 font-italic">
+                        <h4 className="font-weight-900 font-italic text-white">
                             ABOUT US
                         </h4>
                         <ul className="space-y-1 text-sm">
@@ -24,7 +24,7 @@ export default function Footer() {
 
                     {/* HELP */}
                     <div className="space-y-3">
-                        <h4 className="font-weight-900 font-italic">
+                        <h4 className="font-weight-900 font-italic text-white">
                             HELP
                         </h4>
                         <ul className="space-y-1 text-sm">
@@ -37,7 +37,7 @@ export default function Footer() {
 
                     {/* OUR PRODUCTS */}
                     <div className="space-y-3">
-                        <h4 className="font-weight-900 font-italic">
+                        <h4 className="font-weight-900 font-italic text-white">
                             OUR PRODUCTS
                         </h4>
                         <ul className="space-y-1 text-sm">
@@ -50,7 +50,7 @@ export default function Footer() {
 
                     {/* CONTACT US */}
                     <div className="space-y-3">
-                        <h4 className="font-weight-900 font-italic">
+                        <h4 className="font-weight-900 font-italic text-white">
                             CONTACT US
                         </h4>
                         <ul className="space-y-1 text-sm">

@@ -32,7 +32,7 @@ export default function Navbar() {
         {open ?
           <button
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden lg:hidden z-999">
+            className="md:hidden lg:hidden z-998">
             <Image src="/icons/close.svg"
               alt="Xiaomi"
               width={24}
@@ -42,7 +42,7 @@ export default function Navbar() {
           :
           < button
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden lg:hidden z-999 ">
+            className="md:hidden lg:hidden z-998">
             <Image src="/icons/toggle_mb_nav.svg"
               alt="Xiaomi"
               width={24}
