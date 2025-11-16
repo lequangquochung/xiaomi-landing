@@ -4,6 +4,7 @@ import styles from "./Dashboard.module.scss";
 import TopSelling from "app/TopSelling/TopSelling";
 import TopProducts from "app/TopProducts/TopProducts";
 import SaleProducts from "app/SaleProducts/SaleProducts";
+import Footer from "@components/Footer/Footer";
 
 
 export default function Dashboard() {
@@ -26,6 +27,7 @@ export default function Dashboard() {
             <TopSelling />
             <TopProducts />
             <SaleProducts />
+            <Footer />
         </div>
     );
 }

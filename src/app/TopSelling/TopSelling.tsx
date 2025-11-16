@@ -31,7 +31,7 @@ export default function TopSelling() {
     return (
         <section className={`wrapperBlock`}>
             <div className={styles.inner}>
-                <h2 className={`${styles.titleTopicBackground} titleTopic`}>TOP BEST-SELLING PRODUCTS</h2>
+                <h2 className={`${styles.titleTopicBackground} titleTopic mb-6`}>TOP BEST-SELLING PRODUCTS</h2>
 
                 {/* header */}
                 <div className={`${styles.row} ${styles.rowHeader} ${styles.colDetails} fontSizeMobile`}>

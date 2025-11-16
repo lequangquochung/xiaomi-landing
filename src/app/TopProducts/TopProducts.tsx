@@ -19,19 +19,19 @@ export default function TopProducts() {
     return (
         <div className="wrapperBlock !pt-0">
             <div className={`${styles.inner} relative overflow-hidden`}>
-                <div className="flex items-center justify-between">
-                    <h2 className="titleTopic text-[28px] md:text-[32px] font-extrabold text-[#FFD22F] tracking-[0.2em]">
+                <div className="flex items-center justify-between mb-3">
+                    <h2 className="titleTopic">
                         TOP PRODUCTS
                     </h2>
                     <div className="flex gap-3">
                         <button
-                            className={`${styles.slideButton} tp-arrow-prev`}
+                            className={`slideButton tp-arrow-prev`}
                             aria-label="Previous"
                         >
                             ‹
                         </button>
                         <button
-                            className={`${styles.slideButton} tp-arrow-next`}
+                            className={`slideButton tp-arrow-next`}
                             aria-label="Next"
                         >
                             ›

@@ -1,6 +1,26 @@
 .inner {
     width: 100%;
     max-width: 1200px;
-    padding: 32px 32px 40px;
+    padding: 32px 16px;
     border-radius: 16px;
+}
+
+.imgShow {
+    img {
+        height: 240px;
+    }
+}
+
+
+/* responsive */
+@media (max-width: 768px) {
+    .imgShow {
+        img {
+            height: 171px;
+        }
+    }
+
+    .fontSizeMobile {
+        font-size: 12px;
+    }
 }

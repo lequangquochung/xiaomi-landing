@@ -1,75 +1,65 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-
+import { Autoplay, Navigation } from "swiper/modules";
+import styles from "./SaleProducts.module.scss";
 import "swiper/css";
 
-export default function HomeSection() {
+export default function PromoSection() {
     return (
-        <div className="w-full bg-[#111] text-white py-10 px-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="wrapperBlock !pt-0">
 
-                {/* BLACK FRIDAY */}
+            <div className={` ${styles.inner} grid grid-cols-1 lg:grid-cols-2 gap-8 !pt-0`}>
+
+                {/* LEFT: BLACK FRIDAY (50%) */}
                 <div>
-                    <h2 className="text-yellow-400 text-xl font-bold mb-3">BLACK FRIDAY</h2>
+                    <div className="flex items-center justify-between mb-3">
+                        <h2 className="titleTopic text-yellow-400 font-bold text-2xl">BLACK FRIDAY</h2>
+
+                        <div className="flex gap-3">
+                            <button className="slideButton nav-prev ">‹</button>
+                            <button className="slideButton nav-next ">›</button>
+                        </div>
+                    </div>
 
                     <Swiper
-                        modules={[Autoplay]}
+                        modules={[Autoplay, Navigation]}
                         autoplay={{
                             delay: 2500,
                             disableOnInteraction: false,
                         }}
+                        navigation={{
+                            prevEl: ".nav-prev",
+                            nextEl: ".nav-next",
+                        }}
                         loop={true}
                         spaceBetween={20}
-                        className="rounded-xl overflow-hidden"
+                        className={`${styles.imgShow} overflow-hidden`}
                     >
                         <SwiperSlide>
-                            <img
-                                src="/images/black-friday-1.jpg"
-                                alt="Black Friday 1"
-                                className="rounded-xl w-full"
-                            />
+                            <img src="/images/black_friday.png" className="w-full h-full" />
                         </SwiperSlide>
-
                         <SwiperSlide>
-                            <img
-                                src="/images/black-friday-2.jpg"
-                                alt="Black Friday 2"
-                                className="rounded-xl w-full"
-                            />
-                        </SwiperSlide>
-
-                        <SwiperSlide>
-                            <img
-                                src="/images/black-friday-3.jpg"
-                                alt="Black Friday 3"
-                                className="rounded-xl w-full"
-                            />
+                            <img src="/images/black_friday.png" className="w-full h-full" />
                         </SwiperSlide>
                     </Swiper>
                 </div>
 
-                {/* NEW PRODUCTS */}
-                <div>
-                    <h2 className="text-yellow-400 text-xl font-bold mb-3">NEW PRODUCTS</h2>
+                {/* RIGHT: NEW PRODUCTS + SALES (50%) */}
+                <div className="grid grid-cols-2 gap-6">
 
-                    <img
-                        src="/images/new-products.jpg"
-                        alt="New Products"
-                        className="rounded-xl w-full"
-                    />
-                </div>
+                    {/* NEW PRODUCTS */}
+                    <div className={`${styles.imgShow} space-y-4`}>
+                        <h2 className={`${styles.fontSizeMobile} titleTopic !text-left`}>NEW PRODUCTS</h2>
+                        <img src="/images/new_product.png" className="rounded-xl w-full " />
+                    </div>
 
-                {/* SALES */}
-                <div>
-                    <h2 className="text-yellow-400 text-xl font-bold mb-3">SALES</h2>
+                    {/* SALES */}
+                    <div className={`${styles.imgShow} space-y-4`}>
+                        <h2 className={`${styles.fontSizeMobile} titleTopic !text-left`}>SALES</h2>
+                        <img src="/images/sale_product.png" className="rounded-xl w-full" />
+                    </div>
 
-                    <img
-                        src="/images/sales.jpg"
-                        alt="Sales"
-                        className="rounded-xl w-full"
-                    />
                 </div>
 
             </div>
