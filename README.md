@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Screenshot 
+<img width="1837" height="986" alt="image" src="https://github.com/user-attachments/assets/04772c0a-aa0d-4ef1-807e-d48a43bf18a7" />
+<img width="1841" height="992" alt="image" src="https://github.com/user-attachments/assets/bce775e5-682c-4389-a9ad-27f5010feb65" />
+
+# Link deploy 
+https://xiaomi-landing-delta.vercel.app/
+
+
